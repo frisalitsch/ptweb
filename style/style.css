@@ -1,0 +1,86 @@
+
+/* GLOBAL */
+
+ /* FONTS */
+
+html {
+    @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+}
+body {
+    font-family: Montserrat;
+    font-weight: 400;
+    color : #FFFFFF;
+    font-size: 12pt;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Style for our header texts
+* --------------------------------------- */
+h1{
+    font-size: 2em;
+    margin:0;
+    padding:0;
+}
+h2{
+    font-size: 1.5em;
+}
+
+/* Centered texts in each section
+* --------------------------------------- */
+.section{
+    text-align:center;
+}
+
+/* Fixed header and footer.
+* --------------------------------------- */
+#header, #footer{
+    position:fixed;
+    height: 3em;
+    display:block;
+    width: 100%;
+    background: #2BB391;
+    z-index:9;
+    text-align:center;
+    color: #ffffff;
+    padding: 10px 0 0 0;
+}
+
+#header{
+    top:0px;
+}
+#footer{
+    bottom:0px;
+}
+
+/* Bottom menu
+* --------------------------------------- */
+#infoMenu {
+    bottom: 80px;
+}
+#infoMenu li a {
+    color: #fff;
+    z-index: 999;
+}
+
+/* HEADER */
+
+header{
+    background-image: url(../includes/img/header.jpg);
+}
+
+/* SECTIONS */
+
+.white>* {
+    color:#2BB391;
+}
+.white::after {
+    color:#2BB391;
+}
+.fp-tableCell {
+    padding-top: 5em;
+    vertical-align: top;
+}
