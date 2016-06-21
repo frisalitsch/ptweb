@@ -64,9 +64,8 @@ p{
 	font-size: 2em;
 }
 .intro p{
-	width: 50%;
 	margin: 0 auto;
-	font-size: 1.5em;
+	font-size: 1em;
 }
 .section{
 	text-align:center;
@@ -76,27 +75,26 @@ p{
 	margin: 10px;
 	color: #fff;
 }
-#menu li:active li.active{
+#menu li.active{
 	color: #008077;
 }
 #menu li a{
 	text-decoration:none;
 	color: #fff;
 }
-#menu li.active li:active a:hover{
+#menu li.active a:hover{
 	color: #008077;
 }
 #menu li:hover{
-	
-    color: #008077;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
 }
 #menu li a,
-#menu li.active a li:active{
-	padding: 9px 18px;
+#menu li.active a{
 	display:block;
 }
-#menu li:active li.active a{
-	color: #008077;
+#menu li.active a{
+	color: #fff;
 }
 #menu{
 	position:fixed;
