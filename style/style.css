@@ -25,8 +25,14 @@ h1{
     margin:0;
     padding:0;
 }
+.top h1{
+    padding-top: 2em;
+}
 h2{
     font-size: 1.5em;
+}
+p{
+    font-size: 1em;
 }
 
 /* Centered texts in each section
@@ -56,8 +62,50 @@ h2{
     bottom:0px;
 }
 
+/* Slides menu
+* --------------------------------------- */
+#slidesmenu li {
+	display:inline-block;
+	margin: 10px;
+	color: #fff;
+}
+#slidesmenu li:active{
+	color: #008077;
+}
+#slidesmenu li a{
+	text-decoration:none;
+	color: #fff;
+}
+#slidesmenu li:active a:hover{
+	color: #008077;
+}
+#slidesmenu li::hover{
+	background: rgba(255,255,255, 0.8);
+    color: #008077;
+}
+#slidesmenu li a,
+#menu li.active a{
+	padding: 9px 18px;
+	display:block;
+}
+#slidesmenu li:active a{
+	color: #008077;
+}
+#slidesmenu{
+	top:0;
+	left:0;
+	height: 40px;
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
+
+
+
 /* Bottom menu
 * --------------------------------------- */
+
+
 #infoMenu {
     bottom: 80px;
 }
@@ -80,7 +128,11 @@ header{
 .white::after {
     color:#2BB391;
 }
-.fp-tableCell {
-    padding-top: 5em;
-    vertical-align: top;
+#section3::after
+{
+vertical-align:top;
 }
+section3 {
+    padding-top: 5em;
+}
+

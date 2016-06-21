@@ -6,7 +6,7 @@
 	<title>Lisa FRITSCH - Portfolio</title>
 	<meta name="author" content="Alvaro Trigo Lopez" />
 	<meta name="description" content="fullPage fixed header and footer." />
-	<meta name="keywords"  content="fullpage,jquery,demo,screen,fixed, header,footer, absolute, positioned,css" />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fixed, header,footer, absolute, positioned,css,fullscreen,navigation,control arrows, dots" />
 	<meta name="Resource-type" content="Document" />
 
 
@@ -32,11 +32,14 @@
 		<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-                anchors: ['section0', 'section1', 'section2', 'section3', 'section4'],
-				sectionsColor: ['#FFFFFF', '#FFFFFF', '#2BB391', '#FFFFFF', '#2BB391', '#ccddff'],
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', 'lastPage',],
+				sectionsColor: ['#FFFFFF', '#FFFFFF', '#2BB391', '#FFFFFF', '#2BB391', '#FFFFFF', '#2BB391', '#FFFFFF'],
 				menu: '#menu',
-				scrollingSpeed: 1000,
-
+				scrollingSpeed: 700,
+                scrollBar: true,
+                responsiveHeight: 600,
+				responsiveWidth: 900,
+                slidesNavigation: true,
 			});
 
 		});
@@ -48,16 +51,21 @@
 <div id="header">
     <nav id="menu">
         <ul>
-            <li><a href="#section1">Qui ?</a></li>
-            <li><a href="#section2">Quoi?</a></li>
-            <li><a href="#section3">Comment ?</a></li>
-            <li><a href="#section4">Pour quoi ?</a></li>
-            <li><a href="#section5">Pour qui ?</a></li>
-            <li><a href="#section6">Communiquons</a></li>
+            <li data-menuanchor="secondPage"><a href="#secondPage">Qui ?</a></li>
+            <li data-menuanchor="3rdPage"><a href="#3rdPage">A fait quoi?</a></li>
+            <li data-menuanchor="4thPage"><a href="#4thPage">Sait faire quoi?</a></li>
+            <li data-menuanchor="5thPage"><a href="#5thPage">Pour faire quoi?</a></li>
+            <li data-menuanchor="6thPage"><a href="#6thPage">Pour qui?</a></li>
+            <li data-menuanchor="lastPage"><a href="#lastPage">Contact</a></li>
+            
         </ul>
     </nav>
 </div>
-<div id="footer"><a href="#section0">Haut de page</a></div>
+<!--<div id="footer"><ul><li></li>
+<li></li>
+<li data-menuanchor="firstPage" class="active"><a href="#firstPage">Haut de page</a></li>
+<li></li>
+<li></li></ul><a href="#section0">Haut de page</a></div>-->
 
 <div id="fullpage">
     <header class="section" id="section1">
@@ -66,34 +74,93 @@
         </div>
     </header>
 	<div class="section white" id="section2">
-		<div class="intro">
 			<h1>Qui ?</h1>
 			<h2>Coordonnées</h2>
-			<p class="align-right">51 rue Saint Hubert
+			<p>51 rue Saint Hubert
 57620 GOETZENBRUCK
 06.38.14.48.71
 lisa-fritsch@hotmail.fr
 Née le 16/11/1992 (23 ans)
 Permis B + véhicule</p>
-		</div>
 	</div>
-	<div class="section vhite" id="section3">
+	<div class="section top" id="section3">
+       <h1 class="top">A fait quoi ?</h1>
+        <nav id="slidesmenu"><ul>
+                <li><a href="#section3/0">Centres d'intérêt</a></li>
+                <li><a href="#section3/1">Expérience associative</a></li>
+                <li><a href="#section3/2">Diplômes</a></li>
+        </ul></nav>
 	    <div class="slide" id="slide1">
 			<div class="intro">
-				<h1>Quoi ?</h1>
-				<p>
-					You will need to place your header and footer outside the plugin's wrapper. 
-					This way it won't move on scrolling. Take a look at the source code of this page.
-				</p>
+				<h2>Centres d'intérêt</h2>
+                <h3>MUSIQUE</h3>
+					
+<p>Pratique de la guitare et du piano
+Ecoute  du moment : Lucius ?
+Concerts</p>
+
+    <h3>PHOTOGRAPHIE</h3>
+ 
+Depuis 2008 (évènementiel, portraits...
+
+<h3>VIDEO</h3>
+
+Depuis 2010, réalisations & cadrage (clips
+musicaux, vidéos live...)
+
+<h3>arts, cinéma, théâtre, actualités, Politique,
+patrimoine...</h3>
+        <p>TESTESTESTESTESTESTESTEST
+        TESTESTESTESTESTESTESTEST
+        TESTESTESTESTESTESTESTEST
+        TESTESTESTESTESTESTESTEST
+        TESTESTESTESTESTESTESTEST
+        TESTESTESTESTESTESTESTEST
+        TESTESTESTESTESTESTESTEST
+        TESTESTESTESTESTESTESTEST
+        TESTESTESTESTESTESTESTEST
+        TESTESTESTESTESTESTESTEST
+        TESTESTESTESTESTESTESTEST
+        TESTESTESTESTESTESTESTEST
+        TESTESTESTESTESTESTESTEST
+        TESTESTESTESTESTESTESTEST</p>
 			</div>
 		</div>
 	    <div class="slide" id="slide2">
-			<h2>Slide 2</h2>
+			<div class="intro">
+				<h2>Expérience associative</h2>
+				<p>
+					BLA BLA BLA
+				</p>
+			</div>
+		</div>
+		<div class="slide" id="slide3">
+			<div class="intro">
+				<h2>Diplômes</h2>
+				<p>
+					BLA BLA BLA BLA
+				</p>
+			</div>
 		</div>
 	</div>
-	<div class="section white" id="section5">
+	<div class="section white" id="section4">
 		<div class="intro">
-			<h2>Enjoy it</h2>
+			<h1>Sait faire quoi ?</h1>
+		</div>
+	</div>
+	<div class="section" id="section5">
+		<div class="intro">
+			<h1>Pour faire quoi ?</h1>
+		</div>
+	</div>
+	<div class="section white" id="section6">
+		<div class="intro">
+			<h1>Pour qui ?</h1>
+		</div>
+	</div>
+	<div class="section" id="section7">
+		<div class="intro">
+			<h2>Contact</h2>
 		</div>
 	</div>
 </div>

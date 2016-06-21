@@ -76,26 +76,26 @@ p{
 	margin: 10px;
 	color: #fff;
 }
-#menu li.active{
+#menu li:active li.active{
 	color: #008077;
 }
 #menu li a{
 	text-decoration:none;
 	color: #fff;
 }
-#menu li.active a:hover{
+#menu li.active li:active a:hover{
 	color: #008077;
 }
 #menu li:hover{
-	background: rgba(255,255,255, 0.8);
+	
     color: #008077;
 }
 #menu li a,
-#menu li.active a{
+#menu li.active a li:active{
 	padding: 9px 18px;
 	display:block;
 }
-#menu li.active a{
+#menu li:active li.active a{
 	color: #008077;
 }
 #menu{
