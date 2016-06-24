@@ -3,17 +3,22 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Lisa FRITSCH - Portfolio</title>
+	<title>Lisa FRITSCH</title>
 	<meta name="author" content="Alvaro Trigo Lopez" />
-	<meta name="description" content="fullPage fixed header and footer." />
+	<meta name="description" content="Lisa Fritsch's portfolio, including fullPage and titon." />
 	<meta name="keywords"  content="fullpage,jquery,demo,screen,fixed, header,footer, absolute, positioned,css,fullscreen,navigation,control arrows, dots" />
 	<meta name="Resource-type" content="Document" />
 
 
 	<link rel="stylesheet" type="text/css" href="/includes/fullpage/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="/includes/fullpage/examples/examples.css" />
+    <link href="/includes/titon/dist/toolkit.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style/style.css" />   
 
+<!-- ****** JS ****** -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/toolkit.min.js"></script>
+    <script src="/includes/titon/dist/toolkit.js"></script>
 
 	<!--[if IE]>
 		<script type="text/javascript">
@@ -23,41 +28,52 @@
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-
-	<script type="text/javascript" src="../vendors/jquery.slimscroll.min.js"></script>
-
+    <script type="text/javascript" src="/includes/fullpage/vendors/jquery.slimscroll.min.js"></script>
+    
+    <script type="text/javascript" src="/includes/fullpage/vendors/scrolloverflow.js"></script>
 	<script type="text/javascript" src="/includes/fullpage/jquery.fullPage.js"></script>
 	<script type="text/javascript" src="/includes/fullpage/examples/examples.js"></script>
-
-		<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', 'lastPage',],
-				sectionsColor: ['#FFFFFF', '#FFFFFF', '#2BB391', '#FFFFFF', '#2BB391', '#FFFFFF', '#2BB391', '#FFFFFF'],
-				menu: '#menu',
-				scrollingSpeed: 700,
-                scrollBar: true,
-                responsiveHeight: 600,
-				responsiveWidth: 900,
-                slidesNavigation: true,
-			});
-
-		});
-	</script>
-
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            anchors: ['tete', 'frisalitsch', 'apprendre', 'compet', 'portfolio', 'lesautres', 'coucou',],
+            sectionsColor: ['#FFFFFF', '#FFFFFF', '#2BB391', '#FFFFFF', '#2BB391', '#FFFFFF', '#2BB391', '#FFFFFF'],
+            menu: '#menu',
+            slidesmenu: 'slidesmenu',
+            scrollingSpeed: 700,
+            scrollBar: true,
+            responsiveHeight: 600,
+            responsiveWidth: 900,
+            slidesNavigation: true,
+            scrollOverflow: true,
+			scrollOverflowOptions: {
+					scrollbars: true,
+			        mouseWheel: true,
+			        hideScrollbars: false,
+			        fadeScrollbars: false,
+                	disableMouse: true
+				}
+        });
+        
+    });        
+	   </script>
+	   <script  type="text/javascript">
+           $('.js-showcase').showcase();
+           var blackout = Toolkit.Blackout.instance();
+    blackout.show();</script>
+	   
 </head>
 <body>
-
+<!--- MENU PLINCIPAL. Pour vos options, faites le 2. -->
 <div id="header">
     <nav id="menu">
-        <ul>
-            <li data-menuanchor="secondPage"><a href="#secondPage">Qui ?</a></li>
-            <li data-menuanchor="3rdPage"><a href="#3rdPage">A fait quoi?</a></li>
-            <li data-menuanchor="4thPage"><a href="#4thPage">Sait faire quoi?</a></li>
-            <li data-menuanchor="5thPage"><a href="#5thPage">Pour faire quoi?</a></li>
-            <li data-menuanchor="6thPage"><a href="#6thPage">Pour qui?</a></li>
-            <li data-menuanchor="lastPage"><a href="#lastPage">Contact</a></li>
-            
+        <ul class="menu">
+            <li data-menuanchor="frisalitsch"><a href="#frisalitsch">Frisalitsch</a></li>
+            <li data-menuanchor="apprendre"><a href="#apprendre" title="Les activités">Les activités</a></li>
+            <li data-menuanchor="compet"><a href="#compet" title="les compétences">Les compétences</a></li>
+            <li data-menuanchor="portfolio"><a href="#portfolio">Le portfolio</a></li>
+            <li data-menuanchor="lesautres"><a href="#lesautres">Les partenaires</a></li>
+            <li data-menuanchor="coucou"><a href="#coucou">Le contact</a></li>
         </ul>
     </nav>
 </div>
@@ -70,84 +86,534 @@
 <div id="fullpage">
     <header class="section" id="section1">
        <div class="intro white">
-           <h1>Frisalitsch</h1>
+           <h1 class="title">Frisalitsch</h1>
         </div>
     </header>
 	<div class="section white" id="section2">
-			<h1>Qui ?</h1>
-			<h2>Coordonnées</h2>
-			<p>51 rue Saint Hubert
-57620 GOETZENBRUCK
-06.38.14.48.71
-lisa-fritsch@hotmail.fr
-Née le 16/11/1992 (23 ans)
-Permis B + véhicule</p>
-	</div>
+        <div class="intro grid">
+          <h2>Frisalitsch = Lisa Fritsch</h2>
+           <div class="col medium-9 large-9">
+               <img src="/includes/img/moi.png" width="120px"  class="portrait" alt="Portrait de Lisa Fritsch">
+               <p class="justify">C'est dans les forêts des Vosges du Nord que j'ai grandi. Depuis de plusieurs années, je parcoure ses routes sinueuses. J'y rencontre des gens, puis je m'exporte, plus loin. Après un détour par la microbiologie, j'attéris à Haguenau, en MMI, où j'ai trouvé la source de tous les savoirs que je demandais depuis longtemps. Photographe, puis vidéaste à mes heures bien allouées, je décide enfin de démissionner de mes fonctions de technicienne de laboratoire en 2015. Depuis, je suis comme sur un nuage.</p>
+            </div>
+            <div class="col medium-3 large-3">
+                <p class="right">lisa-fritsch@hotmail.fr<br/>
+                06.38.14.48.71<br/>
+                Strasbourg (67)<br/>
+                Haguenau (67)<br/>
+                Goetzenbruck (57)<br/>
+                23 ans<br/>
+                Permis B + véhicule<br/>
+                Canon 5D Mk II</p>
+            </div>
+        </div>
+    </div>
 	<div class="section top" id="section3">
-       <h1 class="top">A fait quoi ?</h1>
-        <nav id="slidesmenu"><ul>
-                <li><a href="#3rdPage/0">Centres d'intérêt</a></li>
-                <li><a href="#3rdPage/1">Expérience associative</a></li>
-                <li><a href="#3rdPage/2">Diplômes</a></li>
+       <h1>Les activités</h1>
+        <nav id="slidesmenu" class="slides"><ul>
+                <li data-menuanchor="#apprendre/0"><a href="#apprendre/0">Centres d'intérêts</a></li>
+                <li data-menuanchor="#apprendre/1"><a href="#apprendre/1">Expérience associative</a></li>
+                <li data-menuanchor="#apprendre/2"><a href="#apprendre/2">Diplômes</a></li>
         </ul></nav>
 	    <div class="slide" id="slide0">
-			<div class="intro">
-				<h2>Centres d'intérêt</h2>
-                <h3>MUSIQUE</h3>
-					
-<p>Pratique de la guitare et du piano
-Ecoute  du moment : Lucius ?
-Concerts</p>
+                <h2>Centres d'intérêts</h2>
+                <div class="grid">
+                <div class="col medium-12 large-6">
+                    <h3>MUSIQUE</h3>
+                    <p class="justify">Je pratique la guitare et le piano en autodidacte, et grâce des amis professionnels du milieuc depuis plusieurs années.
+                    <br/>Il va de soi que je suis une grande mélomane, et assiste donc à enormément de concerts. Mes concerts les plus mémorables : BB King, Ron Carter, Lucky Peterson, Neil Young, Robert Cray, The Besnard Lakes, The Dandy Warhols...
+                    <br/>J'aurai le bonheur d'assister au concert de Wilco, grand groupe de Chicago, en octobre prochain. Un petit aperçu si vous ne connaissez pas :<br/>
+                    <div class="videoWrapper"><iframe src="https://www.youtube.com/embed/v4_O4Sj-XTs" frameborder="0" allowfullscreen></iframe></div>
+                    
+                    </p>
+                </div>
+                <div class="col medium-12 large-6">
+                    <h3>PHOTOGRAPHIE</h3>
+                    <p>Depuis 2008 (évènementiel, portraits...
+                     Lorem ipsum :
+                    Veritatis fugiat rerum voluptates porro quia nulla laboriosam numquam. Totam qui sed aut. Eos aliquam ipsa qui ut eos molestias. Quis esse deleniti aut quia mollitia est.
 
-    <h3>PHOTOGRAPHIE</h3>
- 
-Depuis 2008 (évènementiel, portraits...
+                    Vel dolores occaecati sed est incidunt fugiat voluptatem deserunt. Est laboriosam quis quis rerum soluta earum iste quidem. Animi nulla magnam voluptas et. Laborum tempora perspiciatis eum ducimus amet.
 
-<h3>VIDEO</h3>
+                    Velit alias dolore qui fugit voluptas. Id dolore asperiores ea ut laboriosam deserunt optio nihil. Et enim tenetur laborum sed iusto. Recusandae consequatur odio alias adipisci voluptas nihil distinctio.
 
-Depuis 2010, réalisations & cadrage (clips
-musicaux, vidéos live...)
+                    Aperiam adipisci eum sit. Perferendis numquam repellat iure ut. Aut eos totam explicabo praesentium. Earum et officia impedit inventore non modi quisquam.
 
-<h3>arts, cinéma, théâtre, actualités, Politique,
-patrimoine...</h3>
-        <p>TEST</p>
+                    Incidunt rerum dolor aliquid molestiae voluptatem veritatis rerum quaerat. Minus fugit culpa eius corporis. Quos incidunt quod culpa sed laudantium sed mollitia ab.
+                    </p>
+                </div>
+                <div class="col medium-12 large-6">
+                    <h3>VIDEO</h3>
+
+                    <p>Depuis 2010, réalisations & cadrage (clips
+                    musicaux, vidéos live...)
+                    
+                    Veritatis fugiat rerum voluptates porro quia nulla laboriosam numquam. Totam qui sed aut. Eos aliquam ipsa qui ut eos molestias. Quis esse deleniti aut quia mollitia est.
+
+                    Vel dolores occaecati sed est incidunt fugiat voluptatem deserunt. Est laboriosam quis quis rerum soluta earum iste quidem. Animi nulla magnam voluptas et. Laborum tempora perspiciatis eum ducimus amet.
+
+                    Velit alias dolore qui fugit voluptas. Id dolore asperiores ea ut laboriosam deserunt optio nihil. Et enim tenetur laborum sed iusto. Recusandae consequatur odio alias adipisci voluptas nihil distinctio.
+
+                    Aperiam adipisci eum sit. Perferendis numquam repellat iure ut. Aut eos totam explicabo praesentium. Earum et officia impedit inventore non modi quisquam.
+
+                    Incidunt rerum dolor aliquid molestiae voluptatem veritatis rerum quaerat. Minus fugit culpa eius corporis. Quos incidunt quod culpa sed laudantium sed mollitia ab.</p>
+                </div>
+                <div class="col medium-12 large-6">
+                    <h3>arts, cinéma, théâtre, actualités, Politique,
+                    patrimoine...</h3>
+                    <p>Veritatis fugiat rerum voluptates porro quia nulla laboriosam numquam. Totam qui sed aut. Eos aliquam ipsa qui ut eos molestias. Quis esse deleniti aut quia mollitia est.
+
+                    Vel dolores occaecati sed est incidunt fugiat voluptatem deserunt. Est laboriosam quis quis rerum soluta earum iste quidem. Animi nulla magnam voluptas et. Laborum tempora perspiciatis eum ducimus amet.
+
+                    Velit alias dolore qui fugit voluptas. Id dolore asperiores ea ut laboriosam deserunt optio nihil. Et enim tenetur laborum sed iusto. Recusandae consequatur odio alias adipisci voluptas nihil distinctio.
+
+                    Aperiam adipisci eum sit. Perferendis numquam repellat iure ut. Aut eos totam explicabo praesentium. Earum et officia impedit inventore non modi quisquam.
+
+                    Incidunt rerum dolor aliquid molestiae voluptatem veritatis rerum quaerat. Minus fugit culpa eius corporis. Quos incidunt quod culpa sed laudantium sed mollitia ab.</p>
+                </div>
 			</div>
 		</div>
 	    <div class="slide" id="slide1">
 			<div class="intro">
 				<h2>Expérience associative</h2>
-				<p>
-					BLA BLA BLA
-				</p>
+				<div class="grid">
+                    <div class="col medium-6 large-8">
+                        <h3>ARToPie</h3>
+                        <p class="justify">
+                        ArtoPie est une association a vocation culturelle, fédérée par Culture et Liberté Moselle. Véritable centre de création artistique, de nombreux artistes résiidents sont accueuillis tout au long de l'année dans l'ancienne manufacture de couverts Manulor : Arts plastiques, théâtre, musique... Avec en général, un échange avec le public à la fin de chaque résidence (exposition, concert...) L'association organise de nombreux évènements comme la fête de la musique, le forum social local et rural Octobre Verre, le Baz'Art, la fête du 1er M(a)isenthal, ou bien accueille centres aérés et colonies de vacances l'été.
+                        <br/>
+                        Après avoir été membre du Conseil d'Administration de l'association pendant plusieurs années, j'occupe en son sein le poste de co-présidente depuis avril 2016. De nombreuses responsabilités pour un tissus de bénévoles nombreux.
+                        </p>
+                    </div>
+                    <div class="col medium-6 large-4">
+                       <h3>Rock Und So Weiter</h3>
+                        <p class="justify">
+                            L'association Rock Und So Weiter, abgégée RUSW, et implantée à Weiterswiller, voit le jour en 2016, suite à l'organisation d'un concert pour Les rockeurs ont du Coeur l'hiver passé. Elle réunit des bénévoles désireux d'apporter un soupçon d'activités culturelles dans le petit village très rural de Weiterswiller, et ses alentours.
+                            Favoriser les échanges, rassembler, et faire découvrir, le tout dans une optique eco-responsable, telles sont les ambitions de cette association.
+                            <br/>
+                            Lorsqu'Emile Fichter et Thomas Lincker, respectivement le président et le secrétaire de l'association, m'ont parlé du projet, j'y ai tout de souite adhéré, et y ai trouvé un moyen de m'engager pour des valeurs qui me sont chères. 
+                        </p>
+                    </div>
+                </div>
 			</div>
 		</div>
 		<div class="slide" id="slide2">
 			<div class="intro">
 				<h2>Diplômes</h2>
 				<p>
-					BLA BLA BLA BLA
+					
 				</p>
 			</div>
 		</div>
 	</div>
-	<div class="section white" id="section4">
+	<div class="section white top" id="section4">
 		<div class="intro">
-			<h1>Sait faire quoi ?</h1>
+			<h1>Les compétences</h1>
 		</div>
 	</div>
-	<div class="section" id="section5">
+	<div class="section top" id="section5"> 
+			<h1>Le portfolio</h1>
+            <nav id="slidesmenu" class="slides"><ul>
+                <li data-menuanchor="#portfolio/0"><a href="#portfolio/0">Tout</a></li>
+                <li data-menuanchor="#portfolio/1"><a href="#portfolio/1">Photographie</a></li>
+                <li data-menuanchor="#portfolio/2"><a href="#portfolio/2">Vidéo</a></li>
+                <li data-menuanchor="#portfolio/3"><a href="#portfolio/3">Print</a></li>
+                <li data-menuanchor="#portfolio/4"><a href="#portfolio/4">En projet</a></li>
+        </ul></nav>
+	    <div class="slide" id="slide0">
+			
+        <div class="intro">
+            <h2>Tout</h2>
+            <div class="grid">
+                    <div class="block1 col medium-6 large-4 portfolio">
+                       <div class="folio1"> 
+                           <img src="/includes/img/Portfolio/Vasgovie.png" alt="Vasgovie projet photos de presse en studio">
+                            <div class="face"> 
+                                 <h2>Presse</h2>
+                                 <h3>Photographie</h3>
+                                 <p>Vasgovie</p> 
+                                 <p>2016</p>
+                                 <a href="#" class="icon">+</a> 
+                             </div> 
+                        </div>
+                    </div>
+                    <div class="block1 col medium-6 large-4 portfolio">
+                       <div class="folio1"> 
+                            <img src="/includes/img/Portfolio/Gamesdoglar.png" alt="Photos de presse pour Gamesdoglar">
+                            <div class="face"> 
+                                 <h2>Presse</h2>
+                                 <h3>Photographie</h3>
+                                 <p>Gamesdoglär</p> 
+                                 <p>2015</p>
+                                 <a href="#" class="icon">+</a> 
+                             </div> 
+                        </div>
+                    </div>
+                    <div class="block1 col medium-6 large-4 portfolio">
+                       <div class="folio1"> 
+                            <img src="/includes/img/Portfolio/VKATS.png" alt="Van Kiley And The Sunshine Photos de presse">
+                            <div class="face"> 
+                                 <h2>Photographie</h2>
+                                 <h3>Presse</h3>
+                                 <p>Van Kiley & The Sunshines</p> 
+                                 <p>2016</p>
+                                 <a href="#" class="icon">+</a> 
+                             </div> 
+                        </div>
+                    </div>
+                    <div class="block1 col medium-6 large-4 portfolio">
+                       <div class="folio1"> 
+                            <img src="/includes/img/Portfolio/TchernobylDay.png" alt="Photos soirée sans nucléaire 2016">
+                            <div class="face"> 
+                                 <h2>Reportage</h2>
+                                 <h3>Photographie</h3>
+                                 <p>Soirée sans nucléaire</p> 
+                                 <p>Artopie - 2016</p>
+                                 <a href="#" class="icon">+</a> 
+                             </div> 
+                        </div>
+                    </div>
+                    <div class="block1 col medium-6 large-4 portfolio">
+                        <div class="folio1"> 
+                            <img src="/includes/img/Portfolio/1ermai.png" alt="Photos fête du premier Mai">
+                            <div class="face"> 
+                                 <h2>Reportage</h2>
+                                 <h3>Photographie</h3>
+                                 <p>Fête du 1er Mai</p> 
+                                 <p>Artopie - 2016</p>
+                                 <a href="#" class="icon">+</a> 
+                             </div> 
+                        </div>  
+                    </div>
+                    <div class="block1 col medium-6 large-4 portfolio">
+                        <div class="folio1">
+                            <img src="/includes/img/Portfolio/f%C3%AAtemusique.png" alt="Affiche fête de la musique Meisenthal 2016">
+                           <div class="face"> 
+                                <h2>Affiche</h2> 
+                                 <h3>PRINT</h3>
+                                 <p>Fête de la musique à Meisenthal</p> 
+                                 <p>2016</p>
+                                 <a href="#" class="icon">+</a> 
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="block1 col medium-6 large-2 portfolio">
+                        <div class="folio1"> 
+                             <img src="/includes/img/Portfolio/SFATLBME53.png"/>
+                             <div class="face"> 
+                                 <h2>Pochette de CD</h2>
+                                 <h3>Print</h3>
+                                 <p>SF & The Ladyboys</p> 
+                                 <p>2015</p>
+                                 <a href="#" class="icon">+</a> 
+                             </div> 
+                        </div>  
+                    </div>
+                </div> 
+			</div>
+        </div>
+	    <div class="slide" id="slide1">
+	    
+        <div class="intro">
+				<h2>Photographie</h2>
+				<div class="grid">
+                   <div class="block1 col medium-6 large-4 portfolio">
+                       <div class="folio1"> 
+                           <img src="/includes/img/Portfolio/Vasgovie.png" alt="Vasgovie projet photos de presse en studio">
+                            <div class="face"> 
+                                 <h2>Presse</h2>
+                                 <h3>Photographie</h3>
+                                 <p>Vasgovie<br/>2016</p>
+                                 <a href="/includes/img/Portfolio/Vasgovie.png" class="iconjs-showcase" title="1st image" data-showcase="category">+</a> 
+                                 
+                                 <a href="/img/large-1.png" class="js-showcase" title="1st image" data-showcase="category">+
+                                </a>
+                             </div> 
+                        </div>
+                    </div>
+                    <div class="block1 col medium-6 large-4 portfolio">
+                       <div class="folio1"> 
+                            <img src="/includes/img/Portfolio/Gamesdoglar.png" alt="Photos de presse pour Gamesdoglar">
+                            <div class="face"> 
+                                 <h2>Presse</h2>
+                                 <h3>Photographie</h3>
+                                 <p>Gamesdoglär<br/>2015</p>
+                                 <a href="#" class="icon">+</a> 
+                             </div> 
+                        </div>
+                    </div>
+                    <div class="block1 col medium-6 large-4 portfolio">
+                       <div class="folio1"> 
+                            <img src="/includes/img/Portfolio/VKATS.png" alt="Van Kiley And The Sunshine Photos de presse">
+                            <div class="face"> 
+                                 <h2>Presse</h2>
+                                 <h3>Photographie</h3>
+                                 <p>Van Kiley & The Sunshines<br/>2016</p>
+                                 <a href="#" class="icon">+</a> 
+                             </div> 
+                        </div>
+                    </div>
+                    <div class="block1 col medium-6 large-4 portfolio">
+                       <div class="folio1"> 
+                            <img src="/includes/img/Portfolio/TchernobylDay.png" alt="Photos soirée sans nucléaire 2016">
+                            <div class="face"> 
+                                 <h2>Reportage</h2>
+                                 <h3>Photographie</h3>
+                                 <p>Soirée sans nucléaire<br/>Artopie - 2016</p>
+                                 <a href="#" class="icon">+</a> 
+                             </div> 
+                        </div>
+                    </div>
+                    <div class="block1 col medium-6 large-4 portfolio">
+                        <div class="folio1"> 
+                            <img src="/includes/img/Portfolio/1ermai.png" alt="Photos fête du premier Mai">
+                            <div class="face"> 
+                                 <h2>Reportage</h2>
+                                 <h3>Photographie</h3>
+                                 <p>Fête du 1er Mai<br/>Artopie - 2016</p>
+                                 <a href="#" class="icon">+</a> 
+                             </div> 
+                        </div>  
+                    </div>
+                </div>
+			</div>
+        </div>
+    <div class="slide" id="slide2"> <!-- VIDEO -->  
+        <div class="intro">
+				<h2>Vidéo</h2>
+				<div class="grid">
+                   <div class="block1 col medium-6 large-4 portfolio">
+                        <div class="folio1"> 
+                            <img src="/includes/img/Portfolio/V_BA.png" alt="Photo portrait extrait du clip Drama X de Blind Alley">
+                            <div class="face"> 
+                                 <h2>Blind Alley</h2>
+                                 <h3>VIDEO</h3>
+                                 <p>Clip - Drama X<br/>2014</p> 
+                                 <a href="#" class="icon">+</a> 
+                             </div> 
+                        </div>  
+                    </div>
+                    <div class="block1 col medium-6 large-4 portfolio">
+                        <div class="folio1"> 
+                            <img src="/includes/img/Portfolio/V_MrBig.png" alt="Photo portrait extrait du clip de Lady Mary par le groupe Mr. Bigglesworth">
+                            <div class="face"> 
+                                 <h2>Mr. Bigglesworth<br/>Lady Mary</h2>
+                                 <h3>VIDEO</h3>
+                                 <p>Clip vidéo<br/>2013</p> 
+                                 <a href="#" class="icon">+</a> 
+                             </div> 
+                        </div>  
+                    </div>
+                    <div class="block1 col medium-6 large-4 portfolio">
+                        <div class="folio1"> 
+                            <img src="/includes/img/Portfolio/V_HDT.png" alt="Photo portrait extrait du clip live de l'Homme des Tavernes">
+                            <div class="face"> 
+                                 <h2>L'Homme des Tavernes<br/>Alex Bianchi</h2>
+                                 <h3>VIDEO</h3>
+                                 <p>Clip live<br/>2016</p> 
+                                 <a href="#" class="icon">+</a> 
+                             </div> 
+                        </div>  
+                    </div>
+                    <div class="block1 col medium-6 large-4 portfolio">
+                        <div class="folio1"> 
+                            <img src="/includes/img/Portfolio/V_SP_h2h.png" alt="Photo portrait extrait du clip live de Hard to Handle par le groupe Sweet Parlor">
+                            <div class="face"> 
+                                 <h2>Sweet Parlor<br/>Hard To Handle</h2>
+                                 <h3>VIDEO</h3>
+                                 <p>Clip live<br/>2015</p> 
+                                 <a href="#" class="icon">+</a> 
+                             </div> 
+                        </div>  
+                    </div>
+                    <div class="block1 col medium-6 large-4 portfolio">
+                        <div class="folio1"> 
+                            <img src="/includes/img/Portfolio/V_SP_J2OU.png" alt="Photo portrait extrait du clip live de Just the two of us par le groupe Sweet Parlor">
+                            <div class="face"> 
+                                 <h2>Sweet Parlor<br/>Just The Two Of Us</h2>
+                                 <h3>VIDEO</h3>
+                                 <p>Clip live<br/>2015</p> 
+                                 <a href="#" class="icon">+</a> 
+                             </div> 
+                        </div>  
+                    </div>
+                    <div class="block1 col medium-6 large-4 portfolio">
+                        <div class="folio1"> 
+                            <img src="/includes/img/Portfolio/V_SFATLB_YIM.png" alt="Photo portrait extrait du clip live du titre The You In Me par le groupe SF and The Ladyboys">
+                            <div class="face"> 
+                                 <h2>SFATLB<br/>The You In Me</h2>
+                                 <h3>VIDEO</h3>
+                                 <p>Clip live<br/>2013</p> 
+                                 <a href="#" class="icon">+</a> 
+                             </div> 
+                        </div>  
+                    </div>
+                    <div class="block1 col medium-6 large-4 portfolio">
+                        <div class="folio1"> 
+                            <img src="/includes/img/Portfolio/V_SFATLB_CRUI.png" alt="Photo portrait extrait du clip live du titre Cruising In My Mind par le groupe SF and The Ladyboys">
+                            <div class="face"> 
+                                 <h2>SFATLB<br/>Cruising In My Mind</h2>
+                                 <h3>VIDEO</h3>
+                                 <p>Clip live<br/>2013</p> 
+                                 <a href="#" class="icon">+</a> 
+                             </div> 
+                        </div>  
+                    </div>
+                    <div class="block1 col medium-6 large-4 portfolio">
+                        <div class="folio1"> 
+                            <img src="/includes/img/Portfolio/V_SFATLB_SC.png" alt="Photo portrait extrait du clip live du titre Silver Cause par le groupe SF and The Ladyboys">
+                            <div class="face"> 
+                                 <h2>SFATLB<br/>Silver Cause</h2>
+                                 <h3>VIDEO</h3>
+                                 <p>Clip live<br/>2013</p> 
+                                 <a href="#" class="icon">+</a> 
+                             </div> 
+                        </div>  
+                    </div>
+                </div>
+			</div>
+        </div>
+    <div class="slide" id="slide3">   
+        <div class="intro">
+    		<h2>Print</h2>
+				<div class="grid">
+                    <div class="block1 col medium-6 large-2 portfolio">
+                        <div class="folio1"> 
+                             <img src="/includes/img/Portfolio/SFATLBME53.png"/>
+                             <div class="face"> 
+                                 <h2>Pochette de CD</h2>
+                                 <h3>Print</h3>
+                                 <p>SF & The Ladyboys</p> 
+                                 <p>2015</p>
+                                 <a href="#" class="icon">+</a> 
+                             </div> 
+                        </div>  
+                    </div>
+                    <div class="folio1">
+                            <img src="/includes/img/Portfolio/f%C3%AAtemusique.png" alt="Affiche fête de la musique Meisenthal 2016">
+                           <div class="face"> 
+                                <h2>Affiche</h2> 
+                                 <h3>PRINT</h3>
+                                 <p>Fête de la musique à Meisenthal</p> 
+                                 <p>2016</p>
+                                 <a href="#" class="icon">+</a> 
+                            </div> 
+                        </div>
+                </div>
+			</div>
+        </div>
+		<div class="slide" id="slide4"> 
+            <div class="intro">
+				<h2>En projet</h2>
+				<div class="grid">
+                    <div class="col medium-2 large-2">
+                    
+                    </div>
+                    <div class="col medium-2 large-2">
+                    </div>
+                    <div class="col medium-2 large-2">
+                    </div>
+                    <div class="col medium-2 large-2">
+                    </div>
+                    <div class="col medium-2 large-2">
+                    </div>
+                    <div class="col medium-2 large-2">
+                    </div>
+                </div>
+			</div>
+        </div>
+    </div>
+	<div class="section white top" id="section6">
+          
+        <div class="intro">
+           <h1>Les partenaires</h1>
+            <nav id="whiteslidesmenu">
+                <ul>
+                    <li data-menuanchor="#lesautres/0"><a href="#lesautres/0">Tout</a></li>
+                    <li data-menuanchor="#lesautres/1"><a href="#lesautres/1">Associations</a></li>
+                    <li data-menuanchor="#lesautres/2"><a href="#lesautres/2">Artistes / Musiciens</a></li>
+                    <li data-menuanchor="#lesautres/3"><a href="#lesautres/3">Professionnels</a></li>
+                </ul>
+            </nav>
+            <div class="slide" id="slide0">
+                <h2>Tout</h2>
+                <div class="grid"
+                </div> 
+            </div> 
+            <div class="slide" id="slide1">
+                <div class="intro">
+                    <h2>Associations</h2>
+                    <div class="grid">
+                        <div class="col medium-2 large-2">
+                        
+                        </div>
+                        <div class="col medium-2 large-2">
+                        </div>
+                        <div class="col medium-2 large-2">
+                        </div>
+                        <div class="col medium-2 large-2">
+                        </div>
+                        <div class="col medium-2 large-2">
+                        </div>
+                        <div class="col medium-2 large-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" id="slide2">
+                <div class="intro">
+                    <h2>Artistes / Musiciens</h2>
+                    <div class="grid">
+                        <div class="col medium-2 large-2">
+                        </div>
+                        <div class="col medium-2 large-2">
+                        </div>
+                        <div class="col medium-2 large-2">
+                        </div>
+                        <div class="col medium-2 large-2">
+                        </div>
+                        <div class="col medium-2 large-2">
+                        </div>
+                        <div class="col medium-2 large-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" id="slide3">
+                <div class="intro">
+                    <h2>Professionnels</h2>
+                    <div class="grid">
+                        <div class="col medium-2 large-2">
+                        </div>
+                        <div class="col medium-2 large-2">
+                        </div>
+                        <div class="col medium-2 large-2">
+                        </div>
+                        <div class="col medium-2 large-2">
+                        </div>
+                        <div class="col medium-2 large-2">
+                        </div>
+                        <div class="col medium-2 large-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="section top" id="section7">
 		<div class="intro">
-			<h1>Pour faire quoi ?</h1>
-		</div>
-	</div>
-	<div class="section white" id="section6">
-		<div class="intro">
-			<h1>Pour qui ?</h1>
-		</div>
-	</div>
-	<div class="section" id="section7">
-		<div class="intro">
-			<h2>Contact</h2>
+			<h1>Le contact</h1>
+			<form action="post">
+			    <label for="nom">Nom : </label>
+			    <input type="text" name="nom">
+			    <label for="adressemail">Adresse E-mail : </label>
+			    <input type="email" name="adressemail">
+			    
+			    
+			    
+			    
+			    
+			</form>
 		</div>
 	</div>
 </div>

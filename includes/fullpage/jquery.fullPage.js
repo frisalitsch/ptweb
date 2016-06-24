@@ -151,7 +151,7 @@
 
             //design
             controlArrows: true,
-            controlArrowColor: '#fff',
+            controlArrowColor: '#008077',
             verticalCentered: true,
             sectionsColor : [],
             paddingTop: 0,
@@ -2213,7 +2213,7 @@
         function addSlidesNavigation(section, numSlides){
             section.append('<div class="' + SLIDES_NAV + '"><ul></ul></div>');
             var nav = section.find(SLIDES_NAV_SEL);
-
+            
             //top or bottom
             nav.addClass(options.slidesNavPosition);
 
