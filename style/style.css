@@ -61,6 +61,22 @@ p.info {
     line-height: 3em;
 }
 
+/* LIENS */
+
+
+a{
+	text-decoration:none;
+	color: #fff;
+    text-decoration: underline;
+}
+a:hover{
+	color: #008077;
+}
+a:visited{
+    
+}
+
+
 /* Centered texts in each section
 * --------------------------------------- */
 .section{
@@ -223,7 +239,13 @@ header{
   background-size: cover;
     background-attachment: fixed
 }
-
+.icones {
+    font-size: 3em; 
+}
+a.icones {
+    padding: 2em;
+    display: block;
+}
 
 /* SECTIONS */
 .white{
@@ -470,9 +492,6 @@ height: 100%;
    min-width:300px;
    padding:2em;
    width:50%px;
-       -webkit-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
-   -moz-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
-   box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
     border: 0px solid #d6872d;
    }
 .form-field {
@@ -484,17 +503,11 @@ height: 100%;
    padding:8px;
    margin-bottom:20px;
    width:90%;
-       -webkit-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
-   -moz-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
-   box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
     border: 0px solid #d6872d;
 }
 .form-field:focus {
    background: #ffffff;
    color: #2bb391;
-     -webkit-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
-   -moz-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
-   box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
     border: 0px solid #d6872d;
    }
 .form-container h2 {
